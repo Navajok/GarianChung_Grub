@@ -8,7 +8,6 @@ class OrderHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentUser = Profile.currentUser;
-    int totalqty = 0;
 
     final userOrders = OrderRecords.allOrders
         .where((order) => order.user == currentUser)
@@ -50,6 +49,11 @@ class OrderHistory extends StatelessWidget {
                   }
                 }
 
+                int totalqty = 0;
+                for (var item in itemSummary.values) {
+                  totalqty += item['quantity'] as int;
+                }
+
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   elevation: 3,
@@ -68,50 +72,44 @@ class OrderHistory extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.green),
                         ),
-                        
                         const Divider(thickness: 1.5, height: 12),
                         ...itemSummary.entries.map((e) {
                           final qty = e.value['quantity'];
                           final price = e.value['price'];
-                          for( int i = 0; i< qty; i++){
-                            totalqty++;
-                          }
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 4),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(e.key, style: const TextStyle(fontSize: 16)),
+                                Text(e.key,
+                                    style: const TextStyle(fontSize: 16)),
                                 Text(
                                   '$qty x \$${price.toStringAsFixed(2)}',
                                   style: const TextStyle(
-                                      fontSize: 16, fontWeight: FontWeight.bold),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
                           );
                         }),
-
                         const Divider(thickness: 1.5, height: 12),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            const Text('Total Items: ', 
+                            const Text('Total Items: ',
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
                             Text('$totalqty',
                                 style: const TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
-
                             const SizedBox(width: 12),
-
                             const Text('Total: ',
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
                             Text('\$${order.total.toStringAsFixed(2)}',
                                 style: const TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
-
                           ],
                         )
                       ],
