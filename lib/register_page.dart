@@ -50,11 +50,11 @@ class _RegisterPageState extends State<RegisterPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CircleAvatar(
-                radius: 50,
+                radius: 60,
                 backgroundColor: Color.fromARGB(255, 226, 226, 226),
                 child: Icon(
                   Icons.person,
-                  size: 70,
+                  size: 90,
                   color: Colors.white,
                 ),
               ),
