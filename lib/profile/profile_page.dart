@@ -64,6 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(4),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
               child: Text(isEditing ? 'Save' : 'Edit'),
               onPressed: () {
                 if (isEditing) {

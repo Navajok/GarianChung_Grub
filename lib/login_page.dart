@@ -51,7 +51,6 @@ class _LoginPageState extends State<LoginPage> {
               const CircleAvatar(
                 radius: 60,
                 backgroundColor: Color.fromARGB(255, 226, 226, 226),
-                // backgroundImage: AssetImage('images/muthu.png'),
                 child: Icon(
                   Icons.person,
                   size: 90,
@@ -96,7 +95,8 @@ class _LoginPageState extends State<LoginPage> {
                       controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Email',
-                        prefixIcon: const Icon(Icons.email),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: emailError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -112,7 +112,8 @@ class _LoginPageState extends State<LoginPage> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        prefixIcon: const Icon(Icons.lock),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: passwordError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -133,12 +134,6 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.all(16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
                         onPressed: () {
                           setState(() {
                             emailError = null;

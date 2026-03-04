@@ -43,7 +43,7 @@ class _FoodListPageState extends State<FoodListPage> {
               Profile.currentUser!.name,
               style: const TextStyle(fontSize: 20),
             ),
-          ],
+          ],  
         ),
       ),
       body: Container(

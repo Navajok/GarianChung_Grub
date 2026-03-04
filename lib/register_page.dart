@@ -95,7 +95,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       controller: usernameController,
                       decoration: InputDecoration(
                         labelText: 'Username',
-                        prefixIcon: const Icon(Icons.person),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: usernameError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -110,7 +111,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         labelText: 'Email',
-                        prefixIcon: const Icon(Icons.email),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: emailError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -125,7 +127,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        prefixIcon: const Icon(Icons.lock),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: passwordError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -140,7 +143,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Confirm Password',
-                        prefixIcon: const Icon(Icons.lock_outline),
+                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.lock_outline, color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: confirmPasswordError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -152,12 +156,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
                         onPressed: () {
                           setState(() {
                             usernameError = null;
