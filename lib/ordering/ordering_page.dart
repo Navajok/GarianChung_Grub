@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'orders.dart';
 import 'package:mad_project_test/profile/profile.dart';
-import 'package:mad_project_test/food_list_page.dart';
 import 'package:mad_project_test/data/menu_items.dart';
 import 'package:mad_project_test/data/menu_item_images.dart';
+import 'package:mad_project_test/data/menu_foodoutlets.dart';
 import 'package:mad_project_test/reviews/reviews.dart';
 import 'dart:async';
 
