@@ -95,8 +95,10 @@ class _LoginPageState extends State<LoginPage> {
                       controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Email',
-                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
-                        prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 117, 117, 117)),
+                        labelStyle: const TextStyle(
+                            color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.email,
+                            color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: emailError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -112,8 +114,10 @@ class _LoginPageState extends State<LoginPage> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        labelStyle: const TextStyle(color: Color.fromARGB(255, 117, 117, 117)),
-                        prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 117, 117, 117)),
+                        labelStyle: const TextStyle(
+                            color: Color.fromARGB(255, 117, 117, 117)),
+                        prefixIcon: const Icon(Icons.lock,
+                            color: Color.fromARGB(255, 117, 117, 117)),
                         errorText: passwordError,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),

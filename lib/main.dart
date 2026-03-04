@@ -31,13 +31,9 @@ class GrubApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide(color: Colors.indigo, width: 2),
           ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: const BorderSide(color: Colors.indigo, width: 2),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: const BorderSide(color: Colors.indigo, width: 2),
+          floatingLabelStyle: TextStyle(
+            color: Colors.indigo,
+            fontWeight: FontWeight.w500,
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
