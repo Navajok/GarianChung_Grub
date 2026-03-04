@@ -1,4 +1,4 @@
-package com.example.mad_project_test
+package com.garian.madproject
 
 import io.flutter.embedding.android.FlutterActivity
 
