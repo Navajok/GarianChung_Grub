@@ -72,7 +72,7 @@ class OrderHistory extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.green),
                         ),
-                        const Divider(thickness: 1.5, height: 12),
+                        const Divider(color: Color.fromARGB(255, 187, 187, 187),thickness: 1.5, height: 12),
                         ...itemSummary.entries.map((e) {
                           final qty = e.value['quantity'];
                           final price = e.value['price'];
@@ -93,7 +93,7 @@ class OrderHistory extends StatelessWidget {
                             ),
                           );
                         }),
-                        const Divider(thickness: 1.5, height: 12),
+                        const Divider(color: Color.fromARGB(255, 187, 187, 187) ,thickness: 1.5, height: 12),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [

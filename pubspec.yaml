@@ -1,7 +1,7 @@
 name: mad_project_test
 description: A Online Food ordering App built using Flutter. Test Project.
 publish_to: 'none'
-version: 0.1.0
+version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -29,3 +29,9 @@ flutter:
 
   assets:
     - images/
+    - images/Subway/
+    - images/BurgerKing/
+    - images/KFC/
+    - images/LJS/
+    - images/Mcdonalds/
+    - images/Pizzahut/
